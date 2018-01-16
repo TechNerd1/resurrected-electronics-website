@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @item.title %>
+</p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @item.brand %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @item.model %>
+</p>
+
+<p>
+  <strong>Release year:</strong>
+  <%= @item.release_year %>
+</p>
+
+<p>
+  <strong>Destription:</strong>
+  <%= @item.destription %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  $<%= @item.price %>
+</p>
+
+<p>
+  <strong>Carrier:</strong>
+  <%= @item.carrier %>
+</p>
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>

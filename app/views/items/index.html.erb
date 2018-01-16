@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-md-1">
+    <div class="cat">
+      <p class="text-right">
+        <div class="btn-group">
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Category <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Cat1</a></li>
+            <li><a href="#">Cat2</a></li>
+            <li><a href="#">Cat3</a></li>
+            
+          </ul>
+        </div>
+    </div>
+  
+  </div>
+  <div class="col-md-11" >
+
+    
+    <p id="header"><h1>All Items</h1></p>
+    <% @items.each do |item|  %>
+      <div class="col-md-3 ">
+        <div class="pod-body">
+          <p class="text-center"><%= link_to truncate(item.title, :length => 30), item_path(item.id)%></p>
+          <center>
+          <img src="https://store.storeimages.cdn-apple.com/4974/as-images.apple.com/is/image/AppleInc/aos/published/images/H/KH/HKHC2/HKHC2?wid=445&hei=445&fmt=jpeg&qlt=95&op_sharpen=0&resMode=bicub&op_usm=0.5,0.5,0,0&iccEmbed=0&layer=comp&.v=1474481298618"
+          height="200px"></center>
+          <br>
+          <p class="text-right">
+            <strong id="price" >$<%= item.price %></strong>
+          </p>
+          
+          
+        </div>
+        <br>
+      </div>
+    <% end %>
+    
+  </div>
+</div>
